@@ -11,7 +11,7 @@ function wikileaks_feeds_feeds_importer_default() {
   $feeds_importer->id = 'wikileaks_cablegate';
   $feeds_importer->config = array(
     'name' => 'Wikileaks Cablegate',
-    'description' => '',
+    'description' => 'For importing wikileaks cablegate data from http://cablegate.wikileaks.org/',
     'fetcher' => array(
       'plugin_key' => 'feeds_fetcher_directory_fetcher',
       'config' => array(
@@ -54,9 +54,9 @@ function wikileaks_feeds_feeds_importer_default() {
     ),
     'content_type' => '',
     'update' => 0,
-    'import_period' => 1800,
+    'import_period' => '-1',
     'expire_period' => 3600,
-    'import_on_create' => TRUE,
+    'import_on_create' => 1,
   );
 
   $export['wikileaks_cablegate'] = $feeds_importer;
