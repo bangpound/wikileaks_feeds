@@ -35,4 +35,11 @@ items because each file would contain multiple items. For static HTML pages, the
 files only contain one item. Therefore only one item will be created for each
 cron task.
 
+Feeds Fetcher directory maintains a list of files it has already processed in
+the source configuration rather than using filenames as a unique target. Feeds'
+periodic job scheduler will never refresh the items it has already imported
+unless you check the "Re-fetch entire directory" checkbox. Likewise, it is
+imperative that you keep the minimum refresh period (import_period) at "as often
+as possible."
+
 Parsing and mapping tags and sources are not implemented.
