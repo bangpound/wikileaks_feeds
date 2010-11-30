@@ -45,3 +45,8 @@ imperative that you keep the minimum refresh period (import_period) at "as often
 as possible."
 
 Parsing and mapping tags is not implemented.
+
+* [Data Taxonomy: Limit deletion to item id, data table name
+](http://drupal.org/node/925390)
+* [Data Search is wiping search index for node
+](http://drupal.org/node/847674)
