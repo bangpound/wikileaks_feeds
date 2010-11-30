@@ -48,6 +48,11 @@ function wikileaks_feeds_feeds_importer_default() {
             'target' => 'timestamp',
             'unique' => FALSE,
           ),
+          4 => array(
+            'source' => 'querypathparser:4',
+            'target' => 'header',
+            'unique' => FALSE,
+          ),
         ),
         'delete_with_source' => FALSE,
       ),

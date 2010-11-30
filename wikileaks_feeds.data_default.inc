@@ -48,6 +48,10 @@ function wikileaks_feeds_data_default() {
         'length' => 255,
         'not null' => FALSE,
       ),
+      'header' => array(
+        'type' => 'text',
+        'size' => 'medium',
+      ),
     ),
     'name' => 'feeds_data_wikileaks_cablegate',
     'indexes' => array(
