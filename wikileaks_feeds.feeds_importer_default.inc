@@ -53,6 +53,16 @@ function wikileaks_feeds_feeds_importer_default() {
             'target' => 'header',
             'unique' => FALSE,
           ),
+          5 => array(
+            'source' => 'querypathparser:5',
+            'target' => 'data_taxonomy:features_origin',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'querypathparser:6',
+            'target' => 'data_taxonomy:features_classification',
+            'unique' => FALSE,
+          ),
         ),
         'delete_with_source' => FALSE,
       ),

@@ -72,6 +72,8 @@ function wikileaks_feeds_data_default() {
   $data_table->meta = array(
     'data_taxonomy' => array(
       'vocabularies' => array(
+        'features_classification' => 'features_classification',
+        'features_origin' => 'features_origin',
         'features_tags' => 'features_tags',
       ),
       'id' => 'id',

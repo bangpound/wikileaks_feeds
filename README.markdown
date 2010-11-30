@@ -26,6 +26,8 @@ definition.
 * REFERENCE_ID: td:eq(1) a
 * TIMESTAMP: td:eq(2) a
 * HEADER: pre:eq(1)
+* ORIGIN: td:eq(4) a
+* CLASSIFICATION: td:eq(3) a
 
 ## Known Issues
 
@@ -42,4 +44,4 @@ unless you check the "Re-fetch entire directory" checkbox. Likewise, it is
 imperative that you keep the minimum refresh period (import_period) at "as often
 as possible."
 
-Parsing and mapping tags and sources are not implemented.
+Parsing and mapping tags is not implemented.
