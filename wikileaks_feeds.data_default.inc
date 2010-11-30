@@ -64,6 +64,9 @@ function wikileaks_feeds_data_default() {
       'timestamp' => array(
         0 => 'timestamp',
       ),
+      'reference_id' => array(
+        0 => 'reference_id',
+      ),
     ),
     'primary key' => array(
       0 => 'id',
