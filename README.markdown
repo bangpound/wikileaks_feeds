@@ -34,3 +34,5 @@ directory is a unique feed item. Ordinarily, each batch would import multiple
 items because each file would contain multiple items. For static HTML pages, the
 files only contain one item. Therefore only one item will be created for each
 cron task.
+
+Parsing and mapping tags and sources are not implemented.
