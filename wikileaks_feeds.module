@@ -1,3 +1,32 @@
 <?php
 
 include_once('wikileaks_feeds.features.inc');
+
+/**
+ * Implement hook_feeds_data_process_targets_alter().
+ */
+function wikileaks_feeds_feeds_data_processor_targets_alter(&$fields, $data_table) {
+  if ($data_table == 'feeds_data_wikileaks_cablegate') {
+    $fields['subject']['callback'] = 'wikileaks_feeds_subject_callback';
+    $fields['timestamp']['callback'] = 'wikileaks_feeds_timestamp_callback';
+  }
+}
+
+/**
+ * Callback to extract subject of cable from body.
+ *
+ * @todo Handle multiline subjects.
+ */
+function wikileaks_feeds_subject_callback(&$item, $target, $value) {
+  $matches = array();
+  $pattern = '/^SUBJECT: (.+?)$/m';
+  preg_match($pattern, $value, $matches);
+  $item[$target] = $matches[1];
+}
+
+/**
+ * Callback to convert date into timestamp.
+ */
+function wikileaks_feeds_timestamp_callback(&$item, $target, $value) {
+  $item[$target] = strtotime($value);
+}
