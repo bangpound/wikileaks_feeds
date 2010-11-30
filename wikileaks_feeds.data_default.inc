@@ -8,7 +8,7 @@ function wikileaks_feeds_data_default() {
   $data_table = new stdClass;
   $data_table->disabled = FALSE; /* Edit this to true to make a default data_table disabled initially */
   $data_table->api_version = 1;
-  $data_table->title = 'Wikileaks Cablegate';
+  $data_table->title = 'Cables';
   $data_table->name = 'feeds_data_wikileaks_cablegate';
   $data_table->table_schema = array(
     'description' => '',
@@ -79,21 +79,30 @@ function wikileaks_feeds_data_default() {
     'fields' => array(
       'feed_nid' => array(
         'search' => 0,
+        'label' => 'Feed NID',
       ),
       'id' => array(
         'search' => 0,
+        'label' => 'ID',
       ),
       'timestamp' => array(
         'search' => 0,
+        'label' => 'Timestamp',
       ),
       'subject' => array(
         'search' => 1,
+        'label' => 'Subject',
       ),
       'body' => array(
         'search' => 1,
+        'label' => 'Body',
       ),
       'reference_id' => array(
         'search' => 1,
+        'label' => 'Reference ID',
+      ),
+      'header' => array(
+        'label' => 'Header',
       ),
     ),
   );
